@@ -1,0 +1,20 @@
+{
+  "name": "protractorts",
+  "version": "1.0.0",
+  "description": "protractor framework using Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hozefa Ali",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.4.2",
+    "typescript": "^3.6.3",
+    "jasmine": "^3.4.0",
+    "@types/jasmine": "^3.4.0",
+    "@types/jasminewd2": "^2.0.6",
+    "ts-node": "^8.4.1",
+    "@types/node": "^12.7.5"
+  }
+}
