@@ -1,4 +1,5 @@
 import{element,browser,by} from 'protractor'
+import { async } from 'q';
 
 describe("Chain locators and repeaters attribute", function() {
 
@@ -43,20 +44,21 @@ describe("Chain locators and repeaters attribute", function() {
 
 	}
 	
-	it('I am in Test Case', function() {
+	//async and await impleted with the unamed function written as ()->
+	it('I am in Test Case', async()=> {
 		
-		browser.get("https://juliemr.github.io/protractor-demo/");
+		await browser.get("https://juliemr.github.io/protractor-demo/");
 		
 		//ng-modal can be used as by.modal() here
-		element(by.model("first")).sendKeys("5");
-		element(by.model("second")).sendKeys("9");
-		element(by.id("gobutton")).click();
+		await element(by.model("first")).sendKeys("5");
+		await element(by.model("second")).sendKeys("9");
+		await element(by.id("gobutton")).click();
 		
 		//use of promise manually
 		/*element(by.css("h2.ng-binding")).getText().then(function(text){
 			console.log(text);
 		})*/
-		expect(element(by.css("h2.ng-binding")).getText()).toBe("14");
+		await expect(element(by.css("h2.ng-binding")).getText()).toBe("14");
 
 	})
 
