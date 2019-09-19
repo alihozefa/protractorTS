@@ -31,8 +31,6 @@ describe("Chain locators and repeaters attribute", function() {
 
 					items.getAttribute("value").then(function(value) {
 
-						console.log("Value is: " + value);
-
 						if (value == operator) {
 
 							items.click();
