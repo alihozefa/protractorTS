@@ -1,32 +1,35 @@
 import{element,browser,by} from 'protractor'
 import { async } from 'q';
+import { Calc } from './pages/calcPage';
 
 describe("Chain locators and repeaters attribute", function() {
 
+	let calc = new Calc();
+	
 	var value1:any = 9;
 	var value2:any = 5;
 	var result:any = value1 - value2;
 
-	function Calc(value1:any, value2:any, operator:any) {
+	function calcular(value1:any, value2:any, operator:any) {
 
 		// enter first value
-		element(by.model("first")).sendKeys(value1);
+		calc.firstInput.sendKeys(value1);
 
 		// enter second value
-		element(by.model("second")).sendKeys(value2);
+		calc.secondInput.sendKeys(value2);
 
 		// select operator
 		selectOperator(operator);
 
 		// click GO
-		element(by.id("gobutton")).click();
+		calc.goButton.click();
 
 	}
 
 	// use of dropdown and attribute called tagName
 	function selectOperator(operator) {
 
-		element(by.model("operator")).all(by.tagName("option")).each(
+		calc.operation.all(by.tagName("option")).each(
 				function(items) {
 
 					items.getAttribute("value").then(function(value) {
@@ -48,15 +51,15 @@ describe("Chain locators and repeaters attribute", function() {
 		await browser.get("https://juliemr.github.io/protractor-demo/");
 		
 		//ng-modal can be used as by.modal() here
-		await element(by.model("first")).sendKeys("5");
-		await element(by.model("second")).sendKeys("9");
-		await element(by.id("gobutton")).click();
+		await calc.firstInput.sendKeys("5");
+		await calc.secondInput.sendKeys("9");
+		await calc.goButton.click();
 		
 		//use of promise manually
 		/*element(by.css("h2.ng-binding")).getText().then(function(text){
 			console.log(text);
 		})*/
-		await expect(element(by.css("h2.ng-binding")).getText()).toBe("14");
+		await expect(calc.result.getText()).toBe("14");
 
 	})
 
@@ -65,10 +68,9 @@ describe("Chain locators and repeaters attribute", function() {
 
 		browser.get("https://juliemr.github.io/protractor-demo/");
 
-		Calc(9, 5, "SUBTRACTION");
+		calcular(9, 5, "SUBTRACTION");
 
-		expect(element(by.css("h2.ng-binding")).getText()).toBe(
-				result.toString());
+		expect(calc.result.getText()).toBe(result.toString());
 
 	})
 
@@ -77,8 +79,7 @@ describe("Chain locators and repeaters attribute", function() {
 
 		// using repeaters tag by.repeater("locator")
 		expect(
-				element(by.repeater("result in memory")).element(
-						by.css("td:nth-child(3)")).getText()).toBe(
+				calc.resultColumn.getText()).toBe(
 				result.toString());
 
 	})
@@ -86,9 +87,9 @@ describe("Chain locators and repeaters attribute", function() {
 	// all function concept
 	it("use of element.all() function", function() {
 
-		Calc(6, 3, "MULTIPLICATION");
+		calcular(6, 3, "MULTIPLICATION");
 
-		Calc(8, 2, "DIVISION");
+		calcular(8, 2, "DIVISION");
 
 		element.all(by.repeater("result in memory")).each(function(items) {
 
