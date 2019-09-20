@@ -4,9 +4,9 @@ exports.config = {
     capabilities: {
         browserName: 'chrome'
     },
-    specs: ['basics.js'],
+    specs: ['basics.js', 'angularJSHome.js'],
     jasmineNodeOpts: {
         showColors: true,
     }
 };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL2NvbmZpZ3VyYXRpb24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFHVyxRQUFBLE1BQU0sR0FBVTtJQUt2QixZQUFZLEVBQUU7UUFDWixXQUFXLEVBQUUsUUFBUTtLQUN0QjtJQUtELEtBQUssRUFBRSxDQUFDLFdBQVcsQ0FBQztJQUdwQixlQUFlLEVBQUU7UUFDZixVQUFVLEVBQUUsSUFBSTtLQUNqQjtDQUNGLENBQUMifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlndXJhdGlvbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL2NvbmZpZ3VyYXRpb24udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFHVyxRQUFBLE1BQU0sR0FBVTtJQUt2QixZQUFZLEVBQUU7UUFDWixXQUFXLEVBQUUsUUFBUTtLQUN0QjtJQUtELEtBQUssRUFBRSxDQUFDLFdBQVcsRUFBQyxrQkFBa0IsQ0FBQztJQUd2QyxlQUFlLEVBQUU7UUFDZixVQUFVLEVBQUUsSUFBSTtLQUNqQjtDQUNGLENBQUMifQ==
