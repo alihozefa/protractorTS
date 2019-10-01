@@ -16,6 +16,7 @@ Before({ tags: "@odd" }, function () {
     console.log("executing before odd test scenario.");
 });
 
-After({ tags: "@odd" }, function () {
+//execute after every test scenario
+After(function () {
     console.log("Test is completed.");
 });
