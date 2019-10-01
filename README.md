@@ -1,5 +1,5 @@
 # Protractor using TypeScript
-This project shows how to setup protractor on a local machine and develop scripts through eclipse.
+This project shows how to setup protractor on a local machine and develop scripts through Visual Studio Code.
 
 ## Reference
 * [ProtoCommerce](https://qaclickacademy.github.io/protocommerce/) - Protractor demo website for practice
