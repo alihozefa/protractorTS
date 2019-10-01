@@ -12,7 +12,7 @@ exports.config = {
    
     cucumberOpts: {
       // require step definitions
-      tags:"@even",
+      tags:"",
       require: [
         './stepdefs/*.js' // accepts a glob
       ]
