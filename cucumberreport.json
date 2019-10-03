@@ -1,0 +1,111 @@
+[
+  {
+    "description": "   Testing Calculator Functionality",
+    "keyword": "Feature",
+    "name": "Calculator Functionality",
+    "line": 1,
+    "id": "calculator-functionality",
+    "tags": [],
+    "uri": "features\\calc.feature",
+    "elements": [
+      {
+        "id": "calculator-functionality;verify-calculator-operations-1",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Verify calculator operations 1",
+        "tags": [
+          {
+            "name": "@even",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "stepdefs\\hooks.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "stepdefs\\hooks.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Calculator home page",
+            "match": {
+              "location": "stepdefs\\calcStepDef.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2753000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I try to add \"2\" and \"6\"",
+            "match": {
+              "location": "stepdefs\\calcStepDef.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 494000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the sum displayed should be \"8\"",
+            "match": {
+              "location": "stepdefs\\calcStepDef.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3165000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "stepdefs\\hooks.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
